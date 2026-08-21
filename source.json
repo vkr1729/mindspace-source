@@ -8,18 +8,32 @@
       "bundleIdentifier": "com.mindspace.offline",
       "developerName": "MindSpace",
       "subtitle": "100% Offline Celestial Meditation",
-      "version": "2.1.0",
+      "version": "2.3.0",
       "versionDate": "2026-08-21",
-      "versionDescription": "MindSpace 2.1.0: Full Adversarial Remediation Release. Day-attached video intro sequencing (.video -> .audio), rolling 30-day persistent Compassion Passes, disjoint-interval listening union on resume, replay accumulator reset, 5-step cosmic onboarding with offline RecommendationEngine & Medical Disclaimer, accessible VoiceOver scrubber & constellation nodes, exact completion UUID reflection matching, truthful checksum & backup-exclusion auditing, primary Next Session button with Pregnancy gap handling, local-calendar Daily Journey scoping, restored 8-pack/15-singles library hierarchy with Work/Sport & duration filters, and reconciled notification authorization.",
-      "downloadURL": "https://github.com/vkr1729/mindspace-source/releases/download/v2.1.0/MindSpace.ipa",
-      "localizedDescription": "MindSpace is a zero-network, 100% private offline celestial meditation experience with 275+ hours of mindfulness audio and video courses.",
+      "versionDescription": "MindSpace 2.3.0: Cinematic Hybrid Celestial Visuals & Polished App Icon. Upgraded all 9 celestial planets with transparent alpha blending, atmospheric glowing coronas, mindful breathing physics, and polished iOS App Icon with deep cosmic lighting.",
+      "downloadURL": "https://github.com/vkr1729/mindspace-source/releases/download/v2.3.0/MindSpace.ipa",
+      "localizedDescription": "MindSpace is a 100% private offline celestial meditation experience with 275+ hours of mindfulness audio and video courses, private GitHub sync, on-demand selective downloads, and cinematic celestial visuals.",
       "iconURL": "https://vkr1729.github.io/mindspace-source/AppIcon-1024.png",
       "tintColor": "7C3AED",
-      "size": 8708348,
+      "size": 5587702,
       "screenshotURLs": [
         "https://vkr1729.github.io/mindspace-source/Mock%20Screen%20Codex.png"
       ],
       "versions": [
+        {
+          "version": "2.3.0",
+          "date": "2026-08-21",
+          "localizedDescription": "Cinematic Hybrid Celestial Visuals & Polished App Icon: Upgraded all 9 celestial planets with transparent alpha blending, atmospheric glowing coronas, mindful breathing physics, and polished iOS App Icon with deep cosmic lighting.",
+          "downloadURL": "https://github.com/vkr1729/mindspace-source/releases/download/v2.3.0/MindSpace.ipa",
+          "size": 5587702
+        },
+        {
+          "version": "2.2.0",
+          "date": "2026-08-21",
+          "localizedDescription": "Private GitHub Content Sync & Selective Downloads: Integrated hardware-backed KeychainManager for PAT credentials, on-demand course downloading directly from private GitHub repositories with live progress and SHA-256 verification, Goal-Oriented Smart Sync, and new Library 'Available' filter.",
+          "downloadURL": "https://github.com/vkr1729/mindspace-source/releases/download/v2.2.0/MindSpace.ipa",
+          "size": 8708348
+        },
         {
           "version": "2.1.0",
           "date": "2026-08-21",
@@ -34,14 +48,20 @@
           "downloadURL": "https://github.com/vkr1729/mindspace-source/releases/download/v2.0.0/MindSpace-v2.0.0.ipa",
           "size": 8412490
         }
+      ],
+      "permissions": [
+        {
+          "type": "background-audio",
+          "usageDescription": "Allows meditation audio and sleep sounds to continue playing when the screen is locked or while multitasking."
+        }
       ]
     }
   ],
   "news": [
     {
-      "title": "MindSpace 2.1.0 Released",
-      "identifier": "mindspace-release-2.1.0",
-      "caption": "Full Adversarial Remediation & Accessibility Release",
+      "title": "MindSpace 2.3 Released",
+      "identifier": "mindspace-release-2.3.0",
+      "caption": "Cinematic Hybrid celestial visuals with transparent alpha blending, atmospheric glowing coronas, and polished iOS App Icon.",
       "date": "2026-08-21",
       "tintColor": "7C3AED",
       "imageURL": "https://vkr1729.github.io/mindspace-source/AppIcon-1024.png",

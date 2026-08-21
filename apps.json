@@ -8,18 +8,25 @@
       "bundleIdentifier": "com.mindspace.offline",
       "developerName": "MindSpace",
       "subtitle": "100% Offline Celestial Meditation",
-      "version": "2.3.0",
+      "version": "2.4.0",
       "versionDate": "2026-08-21",
-      "versionDescription": "MindSpace 2.3.0: Cinematic Hybrid Celestial Visuals & Polished App Icon. Upgraded all 9 celestial planets with transparent alpha blending, atmospheric glowing coronas, mindful breathing physics, and polished iOS App Icon with deep cosmic lighting.",
-      "downloadURL": "https://github.com/vkr1729/mindspace-source/releases/download/v2.3.0/MindSpace.ipa",
+      "versionDescription": "MindSpace 2.4.0: Photorealistic AI Celestial Artworks, On-Demand Private GitHub Streaming & Singles Downloads. Fresh photorealistic 3D planet bodies with 100% native RGBA alpha transparency, serene deep-space App Icon render, seamless AVURLAsset online streaming from private GitHub repository, and category-level Singles downloads.",
+      "downloadURL": "https://github.com/vkr1729/mindspace-source/releases/download/v2.4.0/MindSpace.ipa",
       "localizedDescription": "MindSpace is a 100% private offline celestial meditation experience with 275+ hours of mindfulness audio and video courses, private GitHub sync, on-demand selective downloads, and cinematic celestial visuals.",
       "iconURL": "https://vkr1729.github.io/mindspace-source/AppIcon-1024.png",
       "tintColor": "7C3AED",
-      "size": 5587699,
+      "size": 7873682,
       "screenshotURLs": [
         "https://vkr1729.github.io/mindspace-source/Mock%20Screen%20Codex.png"
       ],
       "versions": [
+        {
+          "version": "2.4.0",
+          "date": "2026-08-21",
+          "localizedDescription": "MindSpace 2.4.0: Photorealistic AI Celestial Artworks, On-Demand Private GitHub Streaming & Singles Downloads. Fresh photorealistic 3D planet bodies with 100% native RGBA alpha transparency, serene deep-space App Icon render, seamless AVURLAsset online streaming from private GitHub repository, and category-level Singles downloads.",
+          "downloadURL": "https://github.com/vkr1729/mindspace-source/releases/download/v2.4.0/MindSpace.ipa",
+          "size": 7873682
+        },
         {
           "version": "2.3.0",
           "date": "2026-08-21",

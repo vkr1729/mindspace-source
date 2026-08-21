@@ -15,7 +15,7 @@
       "localizedDescription": "MindSpace is a 100% private offline celestial meditation experience with 275+ hours of mindfulness audio and video courses, private GitHub sync, on-demand selective downloads, and cinematic celestial visuals.",
       "iconURL": "https://vkr1729.github.io/mindspace-source/AppIcon-1024.png",
       "tintColor": "7C3AED",
-      "size": 5587702,
+      "size": 5587699,
       "screenshotURLs": [
         "https://vkr1729.github.io/mindspace-source/Mock%20Screen%20Codex.png"
       ],
@@ -23,9 +23,9 @@
         {
           "version": "2.3.0",
           "date": "2026-08-21",
-          "localizedDescription": "Cinematic Hybrid Celestial Visuals & Polished App Icon: Upgraded all 9 celestial planets with transparent alpha blending, atmospheric glowing coronas, mindful breathing physics, and polished iOS App Icon with deep cosmic lighting.",
+          "localizedDescription": "MindSpace 2.3.0: Cinematic Hybrid Celestial Visuals & Polished App Icon. Upgraded all 9 celestial planets with transparent alpha blending, atmospheric glowing coronas, mindful breathing physics, and polished iOS App Icon with deep cosmic lighting.",
           "downloadURL": "https://github.com/vkr1729/mindspace-source/releases/download/v2.3.0/MindSpace.ipa",
-          "size": 5587702
+          "size": 5587699
         },
         {
           "version": "2.2.0",

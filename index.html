@@ -1,197 +1,75 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>MindSpace iOS — Celestial Meditation Source</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="dark">
+  <title>MindSpace iOS</title>
   <link rel="icon" type="image/png" href="AppIcon-1024.png">
   <style>
     :root {
-      --bg: #0b0d1b;
-      --card: #151932;
-      --accent: #7c3aed;
-      --accent-glow: rgba(124, 58, 237, 0.4);
-      --text: #f8fafc;
-      --text-muted: #94a3b8;
-      --border: #262c4a;
+      --background: #090d0c;
+      --surface: #111715;
+      --border: #26322e;
+      --primary: #f2f7f4;
+      --secondary: #96a49e;
+      --accent: #8bcab7;
+      --on-accent: #07110d;
     }
-    * { box-sizing: border-box; margin: 0; padding: 0; }
+    * { box-sizing: border-box; }
     body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-      background: radial-gradient(ellipse at top, #1e1b4b 0%, var(--bg) 70%);
-      color: var(--text);
       min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
+      margin: 0;
+      display: grid;
+      place-items: center;
       padding: 24px;
+      background: var(--background);
+      color: var(--primary);
+      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", sans-serif;
     }
-    .container {
-      max-width: 480px;
-      width: 100%;
-      background: rgba(21, 25, 50, 0.85);
-      backdrop-filter: blur(20px);
+    main {
+      width: min(100%, 440px);
+      padding: 32px;
       border: 1px solid var(--border);
       border-radius: 24px;
-      padding: 32px 24px;
+      background: var(--surface);
+    }
+    .icon { width: 88px; height: 88px; border-radius: 20px; }
+    h1 { margin: 20px 0 6px; font-size: 32px; letter-spacing: -0.03em; }
+    .version { color: var(--accent); font-weight: 650; }
+    p { color: var(--secondary); line-height: 1.55; }
+    a.button {
+      display: block;
+      margin-top: 12px;
+      padding: 15px 18px;
+      border-radius: 14px;
       text-align: center;
-      box-shadow: 0 20px 40px rgba(0,0,0,0.5), 0 0 80px var(--accent-glow);
-    }
-    .app-icon {
-      width: 96px;
-      height: 96px;
-      border-radius: 22px;
-      box-shadow: 0 10px 25px rgba(0,0,0,0.4);
-      margin-bottom: 20px;
-      border: 1px solid rgba(255,255,255,0.1);
-    }
-    h1 {
-      font-size: 26px;
-      font-weight: 700;
-      letter-spacing: -0.5px;
-      margin-bottom: 6px;
-    }
-    .badge {
-      display: inline-block;
-      background: rgba(124, 58, 237, 0.2);
-      color: #c4b5fd;
-      border: 1px solid rgba(124, 58, 237, 0.4);
-      padding: 4px 12px;
-      border-radius: 20px;
-      font-size: 12px;
-      font-weight: 600;
-      margin-bottom: 16px;
-    }
-    p.subtitle {
-      color: var(--text-muted);
-      font-size: 14px;
-      line-height: 1.5;
-      margin-bottom: 28px;
-    }
-    .btn {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 10px;
-      width: 100%;
-      padding: 14px 20px;
-      border-radius: 14px;
-      font-size: 15px;
-      font-weight: 600;
       text-decoration: none;
-      transition: all 0.2s ease;
-      cursor: pointer;
-      margin-bottom: 12px;
-      border: none;
+      font-weight: 700;
     }
-    .btn-primary {
-      background: linear-gradient(135deg, #6d28d9, #7c3aed);
-      color: white;
-      box-shadow: 0 4px 15px var(--accent-glow);
-    }
-    .btn-primary:active { transform: scale(0.98); }
-    .btn-secondary {
-      background: #1e2444;
-      color: #e2e8f0;
+    .primary { background: var(--accent); color: var(--on-accent); }
+    .secondary { border: 1px solid var(--border); color: var(--primary); }
+    code {
+      display: block;
+      margin-top: 24px;
+      padding: 14px;
+      overflow-wrap: anywhere;
       border: 1px solid var(--border);
-    }
-    .btn-secondary:active { background: #28305c; }
-    .source-box {
-      margin-top: 24px;
-      padding: 16px;
-      background: rgba(11, 13, 27, 0.6);
-      border: 1px solid var(--border);
-      border-radius: 14px;
-      text-align: left;
-    }
-    .source-title {
+      border-radius: 12px;
+      color: var(--secondary);
       font-size: 12px;
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
-      color: var(--text-muted);
-      margin-bottom: 8px;
-    }
-    .source-url {
-      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
-      font-size: 12px;
-      color: #a78bfa;
-      word-break: break-all;
-      background: rgba(0,0,0,0.3);
-      padding: 8px 10px;
-      border-radius: 8px;
-      border: 1px solid rgba(255,255,255,0.05);
-      user-select: all;
-    }
-    .features {
-      margin-top: 24px;
-      text-align: left;
-      border-top: 1px solid var(--border);
-      padding-top: 20px;
-    }
-    .features h3 {
-      font-size: 13px;
-      color: var(--text-muted);
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
-      margin-bottom: 12px;
-    }
-    .features ul {
-      list-style: none;
-      font-size: 13px;
-      color: #cbd5e1;
-    }
-    .features li {
-      margin-bottom: 8px;
-      display: flex;
-      align-items: center;
-      gap: 8px;
-    }
-    .features li::before {
-      content: "✦";
-      color: #a78bfa;
-    }
-    footer {
-      margin-top: 24px;
-      font-size: 12px;
-      color: #64748b;
     }
   </style>
 </head>
 <body>
-  <div class="container">
-    <img src="AppIcon-1024.png" alt="MindSpace Icon" class="app-icon">
-    <h1>MindSpace iOS</h1>
-    <div class="badge">v2.3.0 (Build 10) • 100% Offline</div>
-    <p class="subtitle">Official Public SideStore & AltStore Source for MindSpace iOS. 100% private offline celestial meditation.</p>
-    
-    <a href="https://github.com/vkr1729/mindspace-source/releases/download/v2.3.0/MindSpace.ipa" class="btn btn-primary" download>
-      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-      Download MindSpace.ipa (5.3 MB)
-    </a>
-
-    <a href="sidestore://source?url=https://vkr1729.github.io/mindspace-source/apps.json" class="btn btn-secondary">
-      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M2 12h20"/></svg>
-      Add to SideStore (1-Tap)
-    </a>
-
-    <div class="source-box">
-      <div class="source-title">SideStore / AltStore Source URL</div>
-      <div class="source-url">https://vkr1729.github.io/mindspace-source/apps.json</div>
-    </div>
-
-    <div class="features">
-      <h3>What's New in v2.3</h3>
-      <ul>
-        <li>Cinematic Hybrid Celestial Bodies: 100% transparent alpha blending on all 9 planet artworks</li>
-        <li>Atmospheric Coronas & Specular Rims: Multi-stop radial backlighting with specular rim lighting</li>
-        <li>Mindful Breathing Physics: Hypnotic 4-second synchronized visual respiration guide</li>
-        <li>Polished iOS App Icon: Deep space cosmic gradients and radiant nebula backlighting</li>
-        <li>Private GitHub Content Sync: Secure Keychain PAT credentials and selective course downloads</li>
-        <li>Zero Network Guarantee: 100% Private Offline Meditation</li>
-      </ul>
-    </div>
-  </div>
-  <footer>MindSpace iOS • Official GitHub Distribution Source</footer>
+  <main>
+    <img class="icon" src="AppIcon-1024.png" alt="MindSpace app icon">
+    <h1>MindSpace</h1>
+    <div class="version">v3.0.0 · build 12</div>
+    <p>A private, account-free meditation app with a calm, image-free interface and offline-first playback.</p>
+    <a class="button primary" href="https://github.com/vkr1729/mindspace-source/releases/download/v3.0.0/MindSpace.ipa">Download unsigned IPA</a>
+    <a class="button secondary" href="sidestore://source?url=https://raw.githubusercontent.com/vkr1729/mindspace-source/main/apps.json">Add to SideStore</a>
+    <code>https://raw.githubusercontent.com/vkr1729/mindspace-source/main/apps.json</code>
+  </main>
 </body>
 </html>
